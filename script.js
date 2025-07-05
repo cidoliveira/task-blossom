@@ -15,3 +15,10 @@ function getApi() {
 }
 
 getApi();
+
+function changeImage() {
+  image.src = "./img/Loading_icon.gif";
+  getApi();
+}
+
+image.addEventListener("click", changeImage);

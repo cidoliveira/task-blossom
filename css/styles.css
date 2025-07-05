@@ -47,7 +47,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 3rem;
+  gap: 2.8rem;
 }
 
 .window2 {
@@ -61,11 +61,11 @@
 }
 
 .window3 {
-  top: 0.6rem;
   position: relative;
   border-radius: 5px;
   border-top: 3rem solid var(--purple-color-3);
   width: 30rem;
+  height: 22rem;
   display: inline-block;
   background-color: var(--purple-color-6);
 }
@@ -91,5 +91,7 @@
 .image {
   object-fit: cover;
   width: 30rem;
-  height: auto;
+  height: 22rem;
+  border-radius: 0px 0px 5px 5px;
+  cursor: pointer;
 }
