@@ -83,6 +83,12 @@ addButton.addEventListener("click", function (event) {
   }
 });
 
+inputTextBox.addEventListener("keydown", function (event) {
+  if (numberTasks >= 6 && event.key === "Enter") {
+    event.preventDefault();
+  }
+});
+
 const pomodoro25min = document.querySelector(".pomodoro-min");
 
 const pomodoroTimer = document.querySelector(".timer");
