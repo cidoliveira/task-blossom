@@ -101,6 +101,14 @@ body {
   align-items: center;
 }
 
+.add-task-button:hover {
+  background-color: var(--purple-color-2);
+}
+
+.add-task-button:active {
+  background-color: var(--purple-color-1);
+}
+
 .task-list {
   display: flex;
   flex-direction: column;
