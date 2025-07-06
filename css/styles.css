@@ -1,5 +1,9 @@
 @import url(reset.css);
 
+body {
+  font-family: "Poppins", sans-serif;
+}
+
 :root {
   --purple-color-1: #b4a5c8;
   --purple-color-2: #c7c0e0;
@@ -37,9 +41,16 @@
   position: relative;
   border-radius: 5px;
   border-top: 3rem solid var(--purple-color-3);
-  padding: 25rem 40rem;
-  display: inline-block;
+  height: 50rem;
+  width: 80rem;
+  display: flex;
+  justify-content: center;
   background-color: var(--purple-color-6);
+}
+
+.form-task {
+  display: flex;
+  gap: 2rem;
 }
 
 .window-column {
@@ -47,6 +58,61 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 2.8rem;
+}
+
+.task-window {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.task-lettering {
+  margin-top: 2rem;
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+}
+
+.task-input {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.input-text-box {
+  margin-top: 0.6rem;
+  width: 50rem;
+  height: 2rem;
+  border-radius: 20px;
+  border: 0px;
+  text-align: center;
+}
+
+.add-task-button {
+  display: inline;
+  background-color: var(--purple-color-3);
+  border: 0px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  align-items: center;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.task-item {
+  margin-top: 0.5rem;
+  padding: 1rem 22rem;
+  background-color: var(--purple-color-4);
+  border-radius: 5px;
+  text-align: center;
 }
 
 .window2 {
@@ -58,38 +124,6 @@
   display: inline-block;
   background-color: var(--purple-color-6);
   align-items: flex-start;
-}
-
-.tasks {
-  margin: 20px 40px;
-  display: flex;
-  justify-content: center;
-}
-
-.tasks-flexbox {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-}
-
-.tasks-logo {
-  max-width: 150px;
-  display: flex;
-  align-items: center;
-}
-
-.task-item {
-  margin-top: 0.5rem;
-  padding: 0.5rem 6rem;
-  background-color: var(--purple-color-4);
-  border-radius: 5px;
-}
-
-.input-text-box {
-  margin-top: 0.5rem;
-  width: 20rem;
 }
 
 .window3 {

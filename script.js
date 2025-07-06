@@ -1,5 +1,5 @@
 const image = document.querySelector(".image");
-const addButton = document.querySelector(".add-button");
+const addButton = document.querySelector(".add-task-button");
 const inputTextBox = document.querySelector(".input-text-box");
 const taskList = document.querySelector(".task-list");
 
@@ -26,11 +26,19 @@ function changeImage() {
 
 image.addEventListener("click", changeImage);
 
+let numberTasks = 0;
+
 addButton.addEventListener("click", function (event) {
   event.preventDefault();
   let newLi = document.createElement("li");
-  newLi.innerHTML = inputTextBox.value;
+  newLi.innerText = inputTextBox.value;
   newLi.classList.add("task-item");
-  taskList.appendChild(newLi);
-  console.log(inputTextBox.value);
+  if (newLi.innerText != "") {
+    taskList.appendChild(newLi);
+    numberTasks++;
+  }
+
+  if (numberTasks >= 6) {
+    addButton.setAttribute("disabled", true);
+  }
 });
