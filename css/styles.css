@@ -56,7 +56,6 @@ body {
 .window-column {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 2.8rem;
 }
 
@@ -134,9 +133,9 @@ body {
   border-top: 3rem solid var(--purple-color-3);
   height: 20rem;
   width: 30rem;
-  display: inline-block;
+  display: flex;
   background-color: var(--purple-color-6);
-  align-items: flex-start;
+  justify-content: center;
 }
 
 .window3 {
@@ -181,4 +180,77 @@ body {
 
 .trash:hover {
   color: white;
+}
+
+.pomodoro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pomodoro-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.pomodoro-button {
+  border: 0px;
+  padding: 0.5rem 1rem;
+  background-color: var(--purple-color-2);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pomodoro-button:hover {
+  background-color: var(--purple-color-1);
+}
+
+.pomodoro-button:active {
+  background-color: var(--purple-color-3);
+}
+
+.timer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 4rem;
+}
+
+.start-and-stop {
+  display: flex;
+  gap: 2rem;
+}
+
+.start {
+  width: 5rem;
+  justify-content: center;
+  margin-top: 2rem;
+  border: 0px;
+  background-color: var(--purple-color-3);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.start:hover {
+  background-color: var(--purple-color-1);
+}
+
+.start:active {
+  background-color: var(--purple-color-2);
+}
+
+.pause {
+  width: 5rem;
+  justify-content: center;
+  margin-top: 2rem;
+  border: solid 3px var(--purple-color-3);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: var(--purple-color-3);
+  font-weight: bold;
+  cursor: pointer;
+  background-color: var(--purple-color-6);
 }
