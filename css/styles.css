@@ -82,7 +82,7 @@ body {
 
 .input-text-box {
   margin-top: 0.6rem;
-  width: 50rem;
+  width: 52rem;
   height: 2rem;
   border-radius: 20px;
   border: 0px;
@@ -109,10 +109,15 @@ body {
 
 .task-item {
   margin-top: 0.5rem;
-  padding: 1rem 22rem;
+  width: 55rem;
+  height: 3rem;
+  padding: 0px 20px;
   background-color: var(--purple-color-4);
   border-radius: 5px;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .window2 {
@@ -160,4 +165,12 @@ body {
   height: 22rem;
   border-radius: 0px 0px 5px 5px;
   cursor: pointer;
+}
+
+.trash {
+  cursor: pointer;
+}
+
+.trash:hover {
+  color: white;
 }

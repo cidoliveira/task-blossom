@@ -31,14 +31,26 @@ let numberTasks = 0;
 addButton.addEventListener("click", function (event) {
   event.preventDefault();
   let newLi = document.createElement("li");
-  newLi.innerText = inputTextBox.value;
+  newLi.innerHTML = `${inputTextBox.value}<i class="trash fa-solid fa-trash"></i>`;
   newLi.classList.add("task-item");
+
   if (newLi.innerText != "") {
     taskList.appendChild(newLi);
     numberTasks++;
+    console.log(numberTasks);
   }
+
+  let trash = newLi.querySelector(".trash");
+  trash.addEventListener("click", function () {
+    newLi.remove();
+    numberTasks--;
+    console.log(numberTasks);
+    addButton.removeAttribute("disabled");
+  });
 
   if (numberTasks >= 6) {
     addButton.setAttribute("disabled", true);
+  } else {
+    addButton.removeAttribute("disabled");
   }
 });
