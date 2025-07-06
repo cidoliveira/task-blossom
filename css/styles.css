@@ -18,6 +18,8 @@ body {
   justify-content: center;
   align-items: center;
   align-content: center;
+  background-color: var(--purple-color-4);
+  background-image: url(../img/Vector.svg);
 }
 
 .background {
@@ -26,8 +28,6 @@ body {
   align-items: center;
   width: auto;
   height: 945px;
-  background-color: var(--purple-color-4);
-  background-image: url(../img/Vector.svg);
 }
 
 .window-container {
@@ -261,4 +261,126 @@ body {
 
 .pause:active {
   background-color: var(--purple-color-4);
+}
+
+@media (max-width: 1300px) {
+  .background {
+    height: auto;
+    padding: 4rem 2rem;
+  }
+
+  .window-container {
+    flex-direction: column;
+  }
+
+  .window1 {
+    width: 60rem;
+    height: auto;
+    padding-bottom: 2rem;
+  }
+
+  .window-column {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .window2,
+  .window3 {
+    width: 30rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .background {
+    padding: 2rem 1rem;
+  }
+
+  .window1 {
+    width: 90vw;
+  }
+
+  .input-text-box {
+    width: 100%;
+    width: 60vw;
+  }
+
+  .task-item {
+    width: 100%;
+  }
+
+  .window-column {
+    flex-direction: column;
+  }
+
+  .window2,
+  .window3,
+  .image {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .background {
+    padding: 1rem 0.5rem;
+  }
+
+  .window1,
+  .window2,
+  .window3,
+  .image {
+    width: 95vw;
+  }
+
+  .window1,
+  .window2,
+  .window3 {
+    border-top-width: 2.5rem;
+  }
+
+  .circle1,
+  .circle2 {
+    padding: 0.7rem;
+    top: -30px;
+  }
+
+  .circle1 {
+    right: 20px;
+  }
+
+  .circle2 {
+    right: 60px;
+  }
+
+  .form-task {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1.5rem;
+  }
+
+  .input-text-box {
+    margin-top: 0;
+    height: 2.5rem;
+    width: 100%;
+    width: 80vw;
+  }
+
+  .task-lettering {
+    max-width: 250px;
+  }
+
+  .pomodoro-buttons {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .pomodoro-button {
+    padding: 0.4rem 0.8rem;
+  }
+
+  .timer {
+    font-size: 3rem;
+  }
 }
