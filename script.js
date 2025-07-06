@@ -29,6 +29,27 @@ function changeImage() {
 image.addEventListener("click", changeImage);
 
 let numberTasks = 0;
+let myTasks = [];
+
+for (let i = 0; i <= 6; i++) {
+  let liText = localStorage.getItem(`task ${i}`);
+  if (liText !== null) {
+    let li = document.createElement("li");
+    li.innerHTML = `${liText}<i class="trash fa-solid fa-trash"></i>`;
+    li.classList.add("task-item");
+
+    let trash = li.querySelector(".trash");
+    let currentTaskNumber = i;
+    trash.addEventListener("click", function () {
+      li.remove();
+      localStorage.removeItem(`task ${currentTaskNumber}`);
+      numberTasks--;
+      addButton.removeAttribute("disabled");
+    });
+
+    taskList.appendChild(li);
+  }
+}
 
 addButton.addEventListener("click", function (event) {
   event.preventDefault();
@@ -39,17 +60,21 @@ addButton.addEventListener("click", function (event) {
 
   if (newLi.innerText != "") {
     taskList.appendChild(newLi);
+    let key = `task ${numberTasks}`;
+    localStorage.setItem(key, newLi.innerText);
+    myTasks.push(newLi.outerHTML);
+    let currentTaskNumber = numberTasks;
     numberTasks++;
-    console.log(numberTasks);
-  }
 
-  let trash = newLi.querySelector(".trash");
-  trash.addEventListener("click", function () {
-    newLi.remove();
-    numberTasks--;
-    console.log(numberTasks);
-    addButton.removeAttribute("disabled");
-  });
+    let trash = newLi.querySelector(".trash");
+    trash.addEventListener("click", function () {
+      newLi.remove();
+      localStorage.removeItem(`task ${currentTaskNumber}`);
+      numberTasks--;
+      console.log(numberTasks);
+      addButton.removeAttribute("disabled");
+    });
+  }
 
   if (numberTasks >= 6) {
     addButton.setAttribute("disabled", true);
