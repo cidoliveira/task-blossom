@@ -254,3 +254,11 @@ body {
   cursor: pointer;
   background-color: var(--purple-color-6);
 }
+
+.pause:hover {
+  background-color: var(--purple-color-5);
+}
+
+.pause:active {
+  background-color: var(--purple-color-4);
+}
