@@ -1,4 +1,7 @@
 const image = document.querySelector(".image");
+const addButton = document.querySelector(".add-button");
+const inputTextBox = document.querySelector(".input-text-box");
+const taskList = document.querySelector(".task-list");
 
 function getApi() {
   fetch("https://api.otakugifs.xyz/gif/allreactions")
@@ -22,3 +25,12 @@ function changeImage() {
 }
 
 image.addEventListener("click", changeImage);
+
+addButton.addEventListener("click", function (event) {
+  event.preventDefault();
+  let newLi = document.createElement("li");
+  newLi.innerHTML = inputTextBox.value;
+  newLi.classList.add("task-item");
+  taskList.appendChild(newLi);
+  console.log(inputTextBox.value);
+});
