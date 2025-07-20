@@ -68,7 +68,7 @@ body {
 
 .task-lettering {
   margin-top: 2rem;
-  max-width: 300px;
+  max-width: 250px;
   display: flex;
   align-items: center;
 }
@@ -306,7 +306,7 @@ body {
   }
 
   .task-item {
-    width: 100%;
+    width: 70vw;
   }
 
   .window-column {
@@ -364,10 +364,6 @@ body {
     height: 2.5rem;
     width: 100%;
     width: 80vw;
-  }
-
-  .task-lettering {
-    max-width: 250px;
   }
 
   .pomodoro-buttons {
