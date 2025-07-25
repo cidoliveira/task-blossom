@@ -1,7 +1,7 @@
 @import url(reset.css);
 
 html {
-  font-size: 80%;
+  font-size: 100%;
 }
 
 body {
@@ -382,5 +382,11 @@ body {
 
   .timer {
     font-size: 3rem;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1300px) {
+  html {
+    font-size: 80%;
   }
 }
