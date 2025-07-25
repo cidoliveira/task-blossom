@@ -5,6 +5,8 @@ html {
 }
 
 body {
+  display: flex;
+  align-items: center;
   font-family: "Poppins", sans-serif;
 }
 
@@ -17,6 +19,19 @@ body {
   --purple-color-6: #f3f2ff;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -27,16 +42,19 @@ body {
 }
 
 .background {
+  /* include padding in its width */
+  box-sizing: border-box;
   padding: 0 4rem;
-  display: flex;
-  align-items: center;
   width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
 }
 
 .window-container {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   gap: 2rem;
 }
@@ -60,7 +78,8 @@ body {
 .window-column {
   display: flex;
   flex-direction: column;
-  gap: 2.8rem;
+  gap: 2vw;
+  padding: 0;
 }
 
 .task-window {
@@ -147,7 +166,7 @@ body {
   border-radius: 5px;
   border-top: 3rem solid var(--purple-color-3);
   width: 30rem;
-  height: 22rem;
+  height: 27.5rem;
   display: inline-block;
   background-color: var(--purple-color-6);
 }
@@ -173,7 +192,7 @@ body {
 .image {
   object-fit: cover;
   width: 30rem;
-  height: 22rem;
+  height: 24.5rem;
   border-radius: 0px 0px 5px 5px;
   cursor: pointer;
 }
@@ -226,8 +245,9 @@ body {
 }
 
 .start {
-  width: 5rem;
+  width: 5vw;
   justify-content: center;
+  align-items: center;
   margin-top: 2rem;
   border: 0px;
   background-color: var(--purple-color-3);
@@ -247,7 +267,7 @@ body {
 }
 
 .pause {
-  width: 5rem;
+  width: 5vw;
   justify-content: center;
   margin-top: 2rem;
   border: solid 3px var(--purple-color-3);
@@ -386,7 +406,7 @@ body {
 }
 
 @media (min-width: 1301px) {
-  html {
-    font-size: 100%;
+  .window1 {
+    width: 50vw;
   }
 }
