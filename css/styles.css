@@ -26,8 +26,8 @@ body {
   padding: 0 4rem;
   display: flex;
   align-items: center;
-  width: auto;
-  height: 945px;
+  width: 100dvw;
+  height: 100dvh;
 }
 
 .window-container {
