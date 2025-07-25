@@ -157,7 +157,7 @@ body {
   border-radius: 50%;
   padding: 0.9rem;
   background-color: var(--purple-color-2);
-  top: -38px;
+  top: -3 8px;
   right: 25px;
 }
 
@@ -382,5 +382,11 @@ body {
 
   .timer {
     font-size: 3rem;
+  }
+}
+
+@media (min-width: 1301px) {
+  html {
+    font-size: 125%;
   }
 }
