@@ -1,5 +1,9 @@
 @import url(reset.css);
 
+html {
+  font-size: 80%;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -26,8 +30,8 @@ body {
   padding: 0 4rem;
   display: flex;
   align-items: center;
-  width: 100dvw;
-  height: 100dvh;
+  width: 100vw;
+  height: 100vh;
 }
 
 .window-container {
@@ -153,7 +157,7 @@ body {
   border-radius: 50%;
   padding: 0.9rem;
   background-color: var(--purple-color-2);
-  top: -38px;
+  top: -30px;
   right: 25px;
 }
 
@@ -162,7 +166,7 @@ body {
   border-radius: 50%;
   padding: 0.9rem;
   background-color: var(--purple-color-2);
-  top: -38px;
+  top: -30px;
   right: 75px;
 }
 
@@ -227,7 +231,7 @@ body {
   margin-top: 2rem;
   border: 0px;
   background-color: var(--purple-color-3);
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   border-radius: 5px;
   color: white;
   font-weight: bold;
@@ -247,7 +251,7 @@ body {
   justify-content: center;
   margin-top: 2rem;
   border: solid 3px var(--purple-color-3);
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   border-radius: 5px;
   color: var(--purple-color-3);
   font-weight: bold;
